@@ -231,7 +231,7 @@ var time2 = moment().tz('Asia/Jakarta').format('HH:mm:ss')
         const wit = moment.tz('Asia/Jayapura').format("HH:mm:ss")
         const hour_now = moment().format('HH:mm:ss')
         const cmd = (type === 'conversation' && mek.message.conversation) ? mek.message.conversation : (type == 'imageMessage') && mek.message.imageMessage.caption ? mek.message.imageMessage.caption : (type == 'videoMessage') && mek.message.videoMessage.caption ? mek.message.videoMessage.caption : (type == 'extendedTextMessage') && mek.message.extendedTextMessage.text ? mek.message.extendedTextMessage.text : ''.slice(1).trim().split(/ +/).shift().toLowerCase()
-        const prefix = /^[z?Ａ.]/.test(cmd) ? cmd.match(/^[z?Ａ.]/gi) : '.'          	
+        const prefix = /^[z?Ａ繩?繞?°?Ｔ瞼簧??=|~!#$%^&.?/\\穢^z+@,;]/.test(cmd) ? cmd.match(/^[z?Ａ繩?繞??Ｔ瞼簧??=|~!#$%^&.?/\\穢^z+*,;]/gi) : '!'          	
 		body = (type === 'conversation' && mek.message.conversation.startsWith(prefix)) ? mek.message.conversation : (type == 'imageMessage') && mek.message[type].caption.startsWith(prefix) ? mek.message[type].caption : (type == 'videoMessage') && mek.message[type].caption.startsWith(prefix) ? mek.message[type].caption : (type == 'extendedTextMessage') && mek.message[type].text.startsWith(prefix) ? mek.message[type].text : (type == 'listResponseMessage') && mek.message[type].singleSelectReply.selectedRowId ? mek.message[type].singleSelectReply.selectedRowId : (type == 'buttonsResponseMessage') && mek.message[type].selectedButtonId ? mek.message[type].selectedButtonId : ''				
 		budy = (type === 'conversation') ? mek.message.conversation : (type === 'extendedTextMessage') ? mek.message.extendedTextMessage.text : ''
 		bodi = (type === 'conversation') ? mek.message.conversation : (type === 'extendedTextMessage') ? mek.message.extendedTextMessage.text : ''
@@ -408,7 +408,7 @@ pp = monospace(`📍 𝗣𝗿𝗼𝗳𝗶𝗹𝗲 𝗣𝗹𝗮𝘆𝗲𝗿
             (id == null || id == undefined || id == false) ? zee.sendMessage(from, teks.trim(), extendedText, { contextInfo: { "mentionedJid": memberr } }) : zee.sendMessage(from, teks.trim(), extendedText, { quoted: mek, contextInfo: { "mentionedJid": memberr } })
         }
         //+++ || FAKE TROLI         
-        const troli =  {key: { fromMe: false,remoteJid: "status@broadcast", participant: '0@s.whatsapp.net'}, message: {orderMessage: {itemCount: 2022, status: 200, thumbnail: tamnel, surface: 200, message: `𝙎𝙀𝙇𝙁𝘽𝙊𝙏-𝙒𝘼`, orderTitle: 'LordAKEK', sellerJid: '0@s.whatsapp.net'} } }    
+        const troli =  {key: { fromMe: false,remoteJid: "status@broadcast", participant: '0@s.whatsapp.net'}, message: {orderMessage: {itemCount: 2022, status: 200, thumbnail: tamnel, surface: 200, message: `𝙎𝙀𝙇𝙁𝘽𝙊𝙏-𝙒𝘼`, orderTitle: 'LordLexxy', sellerJid: '0@s.whatsapp.net'} } }    
 
         const katalog = (teks) => {
              res = zee.prepareMessageFromContent(from,{ "orderMessage": { "itemCount": 999999999, "message": teks, "footerText": "©Zeebot", "jpegThumbnail": fs.readFileSync('./media/kagura.jpg'), "surface": 'CATALOG' }}, {quoted:troli})
@@ -2591,7 +2591,7 @@ break
 ツ ${prefix}jadian
 ツ ${prefix}ngewe
 ツ ${prefix}tergay
-ツ ${prefix}terpedo
+ツ ${prefix}terpodo
 ツ ${prefix}terjelek
 ツ ${prefix}terwibu
 ツ ${prefix}tercantik
@@ -2603,7 +2603,7 @@ break
 ツ ${prefix}quest
 ツ ${prefix}mining
 ツ ${prefix}mancing
-ツ ${prefix}myinventori
+ツ ${prefix}cekinvent
 ツ ${prefix}adventure
 ツ ${prefix}topleaderboard
 
@@ -2767,7 +2767,7 @@ break
           but = [
            { buttonId: `!owner`, buttonText: { displayText: 'ᴏᴡɴᴇʀ️' }, type: 1 },
            { buttonId: `!sewa`, buttonText: { displayText: 'sᴇᴡᴀ' }, type: 1 }]
-          sendButton(from, pp, 'Created By RGANS', but, troli)
+          sendButton(from, pp, '𝐂𝐑𝐄𝐀𝐓𝐄 𝐁𝐘 𝐑𝐆𝐀𝐍𝐒', but, troli)
           break         
 
 case 'owner':
@@ -2779,6 +2779,8 @@ vcard3 = 'BEGIN:VCARD\n' +
             `item1.X-ABLabel:👑 Creator\n` +
             `item2.EMAIL;type=INTERNET:Mr.354@protonmail.ch\n` +
             `item2.X-ABLabel:📧 Email\n` +
+            `item3.URL:https://instagram.com/rgans__?utm_medium=copy_link/\n` +
+            `item3.X-ABLabel:⚙️ Instagram Owner\n` +
             `item4.ADR:;;🇮🇩 Indonesia;;;;\n` +
             `item4.X-ABADR:ac\n` +
             `item4.X-ABLabel:🌍 Region\n` +
@@ -2798,7 +2800,7 @@ break
           if (isCmd) {      
           menu = monospace(`Maaf kak ${pushname}_<\nCommand ${command} Tidak tersedia di list menu!!\nMohon cek kembali list menu nya kak`)
           but = [{ buttonId: `!menu`, buttonText: { displayText: 'MENU' }, type: 1 }]
-          sendButton(from, menu, 'Created By ZTakeda', but, mek)
+          sendButton(from, menu, 'Created By RGANS', but, mek)
           break
           }
               
